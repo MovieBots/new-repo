@@ -1,7 +1,7 @@
 import datetime
 import pytz
 from motor.motor_asyncio import AsyncIOMotorClient
-from info import IS_VERIFY, LINK_MODE, FILE_CAPTION, TUTORIAL, DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, PROTECT_CONTENT, AUTO_DELETE, SPELL_CHECK, AUTO_FILTER, LOG_VR_CHANNEL, SHORTENER_WEBSITE, SHORTENER_API, SHORTENER_WEBSITE2, SHORTENER_API2, TWO_VERIFY_GAP
+from info import IS_VERIFY, SHORTENER_WEBSITE3, SHORTENER_API3, THREE_VERIFY_GAP, LINK_MODE, FILE_CAPTION, TUTORIAL, DATABASE_NAME, DATABASE_URI, DATABASE_URI2, IMDB, IMDB_TEMPLATE, PROTECT_CONTENT, AUTO_DELETE, SPELL_CHECK, AUTO_FILTER, LOG_VR_CHANNEL, SHORTENER_WEBSITE, SHORTENER_API, SHORTENER_WEBSITE2, SHORTENER_API2, TWO_VERIFY_GAP
 
 client = AsyncIOMotorClient(DATABASE_URI)
 mydb = client[DATABASE_NAME]
@@ -23,7 +23,10 @@ class Database:
             'imdb': IMDB,
             'link': LINK_MODE, 
             'is_verify': IS_VERIFY, 
-            'verify_time': TWO_VERIFY_GAP
+            'verify_time': TWO_VERIFY_GAP,
+            'shortner_three': SHORTENER_WEBSITE3,
+            'api_three': SHORTENER_API3,
+            'third_verify_time': THREE_VERIFY_GAP
     }
     
     def __init__(self):
@@ -186,6 +189,28 @@ class Database:
             if time_difference > datetime.timedelta(seconds=time):
                 pastDate = user["last_verified"].astimezone(ist_timezone)
                 second_time = user["second_time_verified"].astimezone(ist_timezone)
+                return second_time < pastDate
+        return False
+
+    async def use_third_shortener(self, user_id, time):
+        user = await self.get_notcopy_user(user_id)
+        if not user.get("third_time_verified"):
+            ist_timezone = pytz.timezone('Asia/Kolkata')
+            await self.update_notcopy_user(user_id, {"third_time_verified":datetime.datetime(2018, 5, 17, 0, 0, 0, tzinfo=ist_timezone)})
+            user = await self.get_notcopy_user(user_id)
+        if await self.user_verified(user_id):
+            try:
+                pastDate = user["second_time_verified"]
+            except Exception:
+                user = await self.get_notcopy_user(user_id)
+                pastDate = user["second_time_verified"]
+            ist_timezone = pytz.timezone('Asia/Kolkata')
+            pastDate = pastDate.astimezone(ist_timezone)
+            current_time = datetime.datetime.now(tz=ist_timezone)
+            time_difference = current_time - pastDate
+            if time_difference > datetime.timedelta(seconds=time):
+                pastDate = user["second_time_verified"].astimezone(ist_timezone)
+                second_time = user["third_time_verified"].astimezone(ist_timezone)
                 return second_time < pastDate
         return False
    
