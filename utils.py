@@ -202,16 +202,21 @@ def list_to_str(k):
     else:
         return ', '.join(f'{elem}, ' for elem in k)
 
-async def get_shortlink(link, grp_id, is_second_shortener=False):
-    settings = await get_settings(grp_id)    
+async def get_shortlink(link, grp_id, is_second_shortener=False, is_third_shortener=False):
+    settings = await get_settings(grp_id)
     if IS_VERIFY:
-        api_key, site_key = ('api_two', 'shortner_two') if is_second_shortener else ('api', 'shortner')
-        api, site = settings[api_key], settings[site_key]        
-        shortzy = Shortzy(api, site)        
+        if is_third_shortener:             
+            api, site = settings['api_three'], settings['shortner_three']
+        else:
+            if is_second_shortener:
+                api, site = settings['api_two'], settings['shortner_two']
+            else:
+                api, site = settings['api'], settings['shortner']
+        shortzy = Shortzy(api, site)
         try:
             link = await shortzy.convert(link)
-        except Exception:
-            link = await shortzy.get_quick_link(link)    
+        except Exception as e:
+            link = await shortzy.get_quick_link(link)
     return link
 
 def get_file_id(message: "Message") -> Any:
