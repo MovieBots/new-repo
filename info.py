@@ -49,7 +49,7 @@ SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "onepagelink.in")
 SHORTENER_API3 = environ.get("SHORTENER_API3", "388ed97f90606d81da656088cc6721395b699bba")
 SHORTENER_WEBSITE3 = environ.get("SHORTENER_WEBSITE3", "ziplinker.net")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
-THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "300"))
+THIRD_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "300"))
 
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
