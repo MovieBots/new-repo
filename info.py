@@ -38,7 +38,6 @@ BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001896609847'))
 URL = environ.get('URL', 'aks-file-to-link-525cd78edc50.herokuapp.com')
 
 # verify system vars
-IS_FSUB = is_enabled('IS_FSUB', True)
 IS_VERIFY = is_enabled('IS_VERIFY', True)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001720210775'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/bots_up")
