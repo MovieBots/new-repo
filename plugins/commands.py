@@ -512,7 +512,7 @@ async def save_tutorial(client, message):
     await message.reply_text(f"<b>Successfully changed tutorial for {title} to</b>\n\n{tutorial}", disable_web_page_preview=True)
    
 @Client.on_message(filters.command('set_tutorial2'))
-async def save_tutorial_two(client, message):
+async def tutorial_two(client, message):
     grp_id = message.chat.id
     title = message.chat.title
     if not await is_check_admin(client, grp_id, message.from_user.id):
@@ -521,9 +521,9 @@ async def save_tutorial_two(client, message):
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         return await message.reply_text("<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
     try:
-        tutorial = message.text.split(" ", 1)[1]
+        tutorial_two = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_caption https://t.me/Aksbackup</code>")    
+        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial2 https://t.me/Nobideveloper</code>")    
     await save_group_settings(grp_id, 'tutorial_two', tutorial_two)
     await message.reply_text(f"<b>Successfully changed tutorial for {title} to</b>\n\n{tutorial_two}", disable_web_page_preview=True)
  
