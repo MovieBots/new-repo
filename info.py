@@ -23,7 +23,7 @@ API_HASH = environ.get('API_HASH', '07cd9c82699c28111cb33693ecbd9116')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1030335104').split()]
 USERNAME = environ.get('USERNAME', 'https://t.me/Attitude2688')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001896609847'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001626107740'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/DD_Movies_Request')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001569815531').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "")
@@ -34,12 +34,12 @@ LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001626107740'))
 QR_CODE = environ.get('QR_CODE', 'https://telegra.ph/file/1ad00e3b6ec43062e72b8.jpg')
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001896609847'))
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001626107740'))
 URL = environ.get('URL', 'aks-file-to-link-525cd78edc50.herokuapp.com')
 
 # verify system vars
 IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001720210775'))
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001626107740'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/bots_up")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/bots_up/165")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
@@ -54,10 +54,10 @@ LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
 auth_channel = environ.get('AUTH_CHANNEL', '-1001954276464')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001998528019'))
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001626107740'))
 
 # hastags request features
-request_channel = environ.get('REQUEST_CHANNEL', '-1002018748408')
+request_channel = environ.get('REQUEST_CHANNEL', '-1001626107740')
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 
 # bot settings
