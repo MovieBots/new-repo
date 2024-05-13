@@ -20,7 +20,7 @@ def is_enabled(value, default):
 #main variables
 API_ID = int(environ.get('API_ID', '21723146'))
 API_HASH = environ.get('API_HASH', '07cd9c82699c28111cb33693ecbd9116')
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '6088261601:AAFUCUHztjmN_wBprFFSiASK-1Tsf0XpBg4')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1030335104').split()]
 USERNAME = environ.get('USERNAME', 'https://t.me/Attitude2688')
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001626107740'))
@@ -45,14 +45,14 @@ TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/bots_up/165")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "542b60b44c1d5d51c66a8c39bf51b5570afc0042")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "moneykamalo.com")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "1153050002b2b2f39c7e58be093cc72f6c576649")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "onepagelink.in")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "388ed97f90606d81da656088cc6721395b699bba")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "ziplinker.net")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
 
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
 
-auth_channel = environ.get('AUTH_CHANNEL', '-1001954276464')
+auth_channel = environ.get('AUTH_CHANNEL', '-1001626107740')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001626107740'))
 
