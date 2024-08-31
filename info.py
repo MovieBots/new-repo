@@ -45,8 +45,8 @@ TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/bots_up/165")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "ffc679dc9713585f2459bf286b80a086e17f190c")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "dollarurl.com")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "388ed97f90606d81da656088cc6721395b699bba")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "ziplinker.net")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "83bb4ec4449b378ae52b9f4e84a2bfb7970ed6ec")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "yamlinks.com")
 TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
 
 # languages search
