@@ -290,7 +290,7 @@ async def delete_all_index(bot, message):
         return
     await message.reply_text('<b>ᴛʜɪs ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ᴀʟʟ ɪɴᴅᴇxᴇᴅ ꜰɪʟᴇs.\nᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ??</b>', reply_markup=InlineKeyboardMarkup(btn))
 
-@Client.on_message(filters.command('settings'))
+@Client.on_message(filters.command('asettings'))
 async def settings(client, message):
     user_id = message.from_user.id if message.from_user else None
     if not user_id:
