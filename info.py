@@ -63,7 +63,7 @@ REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(
 # bot settings
 IS_PM_SEARCH = is_enabled('IS_PM_SEARCH', False)
 AUTO_FILTER = is_enabled('AUTO_FILTER', True)
-PORT = os.environ.get('PORT', '8080')
+PORT = os.environ.get('PORT', '8081')
 MAX_BTN = int(environ.get('MAX_BTN', '8'))
 AUTO_DELETE = is_enabled('AUTO_DELETE', True)
 DELETE_TIME = int(environ.get('DELETE_TIME', 1200))
