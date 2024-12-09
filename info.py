@@ -31,7 +31,7 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://arpitgavla121:vWDED1
 DATABASE_NAME = environ.get('DATABASE_NAME', "Arpit")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'ArpitBots')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002074744533'))
-QR_CODE = environ.get('QR_CODE', 'https://telegra.ph/file/e717ffdfb2394774e44f1.jpg')
+QR_CODE = environ.get('QR_CODE', 'https://telegra.ph/file/378a08d7e1bca338db963-d05a2ded13e2ffa4dd.jpg')
 
 #this vars is for when heroku or koyeb acc get banned, then change this vars as your file to link bot name
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002074744533'))
