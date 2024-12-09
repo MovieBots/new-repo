@@ -28,8 +28,8 @@ MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', '')
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002222465571').split()]
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://arpitgavla121:vWDED1tOOmdV0mAq@cluster0.kic1m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://arpitgavla121:vWDED1tOOmdV0mAq@cluster0.kic1m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DATABASE_NAME = environ.get('DATABASE_NAME', "techvjclonefilterbot")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
+DATABASE_NAME = environ.get('DATABASE_NAME', "Arpit")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'ArpitBots')
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002074744533'))
 QR_CODE = environ.get('QR_CODE', 'https://telegra.ph/file/e717ffdfb2394774e44f1.jpg')
 
