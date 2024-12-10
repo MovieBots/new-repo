@@ -43,11 +43,11 @@ LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002074744533'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/+RsQwXu9PiiQ1MjNl")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/+RsQwXu9PiiQ1MjNl")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
-SHORTENER_API = environ.get("SHORTENER_API", "5f720133a8f53a7299c058d5b8ec918bd899f4f1")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "shortxlinks.com")
-SHORTENER_API2 = environ.get("SHORTENER_API2", "5f720133a8f53a7299c058d5b8ec918bd899f4f1")
-SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "shortxlinks.com")
-TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "600"))
+SHORTENER_API = environ.get("SHORTENER_API", "4d0ef91df5b74f843ba1ef1223d66d86b6f6f81a")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "instantearn.in")
+SHORTENER_API2 = environ.get("SHORTENER_API2", "4d0ef91df5b74f843ba1ef1223d66d86b6f6f81a")
+SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "instantearn.in")
+TWO_VERIFY_GAP = int(environ.get('TWO_VERIFY_GAP', "43200"))
 
 # languages search
 LANGUAGES = ["hindi", "english", "telugu", "tamil", "kannada", "malayalam"]
